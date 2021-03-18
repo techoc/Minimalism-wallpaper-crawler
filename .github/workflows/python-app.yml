@@ -4,6 +4,8 @@
 name: Python application
 
 on:
+  schedule:
+      - cron: '0 6 * * *'
   push:
     branches: [ master ]
   pull_request:
@@ -30,3 +32,11 @@ jobs:
     - name: main
       run: |
         python 爬取极简壁纸2.0.py
+    - name: uploads
+      run: |
+        git config --global user.name "techoc" # 改成Github账号用户名
+        git config --global user.email "543938801@qq.com" # 改成GitHub账号的邮箱
+        cd /home/runner/work/Minimalism-wallpaper-crawler/Minimalism-wallpaper-crawler/极简壁纸
+        git add "*.jpg" "*.png" && echo "Git Added"
+        git commit -m 'upload pa result' && echo "Git Committed"
+        git push -u origin https://github.com/Techoc/Minimalism-wallpaper-crawler-images.git && echo "Git Pushed Origin" # runner改成存放图片的分支

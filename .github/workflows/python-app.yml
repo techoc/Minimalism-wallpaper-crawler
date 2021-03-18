@@ -38,7 +38,7 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
     - name: main
       run: |
-        python 爬取极简壁纸1.0.py
+        python 爬取极简壁纸2.1.py
     - name: uploads
       run: |
         git config --global user.name "techoc"

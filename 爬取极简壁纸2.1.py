@@ -66,7 +66,7 @@ if __name__ == '__main__':
         os.mkdir(novel_save_dir)
     print('当前执行的脚本文件路径为'+ os.path.abspath(__file__))
     print('壁纸下载的文件夹路径为' + os.path.abspath(os.path.dirname(__file__)) + '/极简壁纸')
-    for count in range(1,2): 
+    for count in range(1,20): 
         get_data(count)
     p = Pool(4) # 32进程爬取
     for url in url_list:

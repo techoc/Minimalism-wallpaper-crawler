@@ -43,7 +43,7 @@ jobs:
       run: |
         git config --global user.name "techoc"
         git config --global user.email "543938801@qq.com"
-        cd /home/runner/work/Minimalism-wallpaper-crawler/Minimalism-wallpaper-crawler/极简壁纸
+        cd ./极简壁纸
         git init
         git add *
         git commit -m "add images"

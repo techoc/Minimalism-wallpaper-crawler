@@ -47,4 +47,6 @@ jobs:
         git init
         git add .
         git commit -m "add images"
-        git push -u origin git@github.com:Techoc/Minimalism-wallpaper-crawler-images.git && echo "Git Pushed Origin"
+        git branch -M main
+        git remote add origin git@github.com:Techoc/Minimalism-wallpaper-crawler-images.git
+        git push -u origin main
